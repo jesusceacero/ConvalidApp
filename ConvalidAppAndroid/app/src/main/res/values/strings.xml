@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">ConvalidApp</string>
+    <string name="title_home">Horario</string>
+    <string name="title_dashboard">Convali</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="corporrativo">El email entroducido debe ser el corporativo (@triana.salesianos.edu)</string>
+    <string name="title_profile">Perfil</string>
+    <string name="action_logout">Cerrar sesión</string>
+    <string name="registrar">Registrar salida</string>
+    <string name="mensajeRegitrar">¿Esta seguro que desea registrar esta salida?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="mensajeHistorialRegistrado">Salida registrada correctamente</string>
+    <string name="qr">QR</string>
+    <string name="buscar">Volver a buscar</string>
+    <string name="users">Usuarios</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="modificarContrase">Modificar contraseña</string>
+    <string name="guardarContra">Guardar contraseña</string>
+    <string name="modificarDatos">Modificar datos</string>
+    <string name="guardarDatos">Guardar datos</string>
+    <string name="title_convalidados">CONVALIDADOS</string>
+    <string name="title_extras">EXTRAS</string>
+    <string name="title_imparte">IMPARTE</string>
+    <string name="title_asignatura">Modulos</string>
+    <string name="title_activity_main_conserje">MainConserjeActivity</string>
+    <string name="title_activity_main_profesor">MainProfesorActivity</string>
+    <string name="error_in_the_connection">Error en la conexión</string>
+    <string name="selecPhoto">Debe seleccionar una foto antes de guardarla</string>
+    <string name="savePhoto">La foto se guardo correctamente</string>
+    <string name="validacion">Validación</string>
+    <string name="mensageValidacion">¿Estas seguro que deseas eliminar la foto de usuario?</string>
+</resources>

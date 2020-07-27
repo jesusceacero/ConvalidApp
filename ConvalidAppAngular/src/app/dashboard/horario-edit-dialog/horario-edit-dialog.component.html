@@ -1,0 +1,18 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Editar Horario</h1>
+
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput [(ngModel)]="horarioToEdit.dia" placeholder="Dia">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="horarioToEdit.hora" placeholder="Hora">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button style="color:blue" (click)="cerrarDialog()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="editHorario()">Editar</button>
+    </div>
+</div>

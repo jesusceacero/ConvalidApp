@@ -1,0 +1,22 @@
+<div class="caja">
+    <div fxLayout="column">
+        <h1>Añadir Profesor</h1>
+    </div>
+    <div class="contenido">
+        <form [formGroup]="form" >
+            <div mat-dialog-content>
+                <mat-form-field fxLayout="column">
+                    <input matInput [formControl]="form.controls['fullname']" placeholder="Nombre">
+                </mat-form-field>
+
+                <mat-form-field fxLayout="column">
+                    <input matInput [formControl]="form.controls['email']" placeholder="Email">
+                </mat-form-field>
+            </div>
+
+            <div mat-dialog-actions>
+                <button mat-raised-button color="primary" (click)="addProfesor()">Añadir</button>
+            </div>
+        </form>
+    </div>
+</div>

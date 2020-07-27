@@ -1,0 +1,18 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Editar Curso</h1>
+
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput [(ngModel)]="cursoToEdit.name" placeholder="Nombre">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="cursoToEdit.acronym" placeholder="Acrónimo">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button style="color:blue" (click)="cerrarDialog()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="editCurso()">Editar</button>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="caja">
+    <div fxLayout="column">
+        <h1>Añadir Alumno</h1>
+    </div>
+    <div class="contenido">
+        <form [formGroup]="form">
+            <div mat-dialog-content>
+                <mat-form-field fxLayout="column">
+                    <input matInput [formControl]="form.controls['fullname']" placeholder="Nombre">
+                </mat-form-field>
+
+                <mat-form-field fxLayout="column">
+                    <input matInput [formControl]="form.controls['email']" placeholder="Email">
+                </mat-form-field>
+
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Permiso para salir</mat-label>
+                    <mat-select [formControl]="form.controls['permiso']">
+                        <mat-option [value]="true">
+                            Si
+                        </mat-option>
+                        <mat-option [value]="false">
+                            No
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Curso</mat-label>
+                    <mat-select [formControl]="form.controls['course']">
+                        <mat-option *ngFor="let curso of listadoCursos" [value]="curso" (click)="loadConvalidados()">
+                            {{curso.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="separador">
+
+                    <mat-form-field class="ancho" appearance="fill">
+                        <mat-label>Convalidadas</mat-label>
+                        <mat-select [formControl]="form.controls['convalidadas']" multiple>
+                            <mat-option *ngFor="let convali of listadoConvalidar" [value]="convali._id">
+                                {{convali.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+
+                <div class="separador">
+
+                    <h3>Selección de asignaturas extra:</h3>
+
+                    <mat-form-field class="ancho" appearance="fill">
+                        <mat-label>Curso</mat-label>
+                        <mat-select [formControl]="form.controls['courseExtra']">
+                            <mat-option *ngFor="let curso of listadoCursos" [value]="curso"
+                                (click)="loadExtras()">
+                                {{curso.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="ancho" appearance="fill">
+                        <mat-label>Extras</mat-label>
+                        <mat-select [formControl]="form.controls['extras']" multiple>
+                            <mat-option *ngFor="let extra of listadoExtras" [value]="extra._id">
+                                {{extra.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div mat-dialog-actions>
+                <button class="ancho" mat-raised-button color="primary" (click)="addUsuario()">Añadir</button>
+            </div>
+        </form>
+    </div>
+</div>

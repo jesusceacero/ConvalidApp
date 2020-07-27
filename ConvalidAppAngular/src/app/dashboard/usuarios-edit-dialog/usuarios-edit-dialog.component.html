@@ -1,0 +1,18 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Editar Curso</h1>
+
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput [(ngModel)]="usuarioDTO.fullname" placeholder="Nombre" value="usuarioDTO.fullname">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="usuarioDTO.birthdate" placeholder="Fecha de nacimiento" value="usuarioDTO.birthdate">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button style="color:blue" (click)="cerrarDialog()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="editUsuario()">Editar</button>
+    </div>
+</div>

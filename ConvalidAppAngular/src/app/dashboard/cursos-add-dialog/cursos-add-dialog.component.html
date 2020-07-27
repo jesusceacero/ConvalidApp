@@ -1,0 +1,20 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Añadir Curso</h1>
+
+    <form [formGroup]="form">
+        <div mat-dialog-content>
+            <mat-form-field>
+                <input matInput [formControl]="form.controls['name']" placeholder="Nombre">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [formControl]="form.controls['acronym']" placeholder="Acrónimo">
+            </mat-form-field>
+        </div>
+
+        <div mat-dialog-actions>
+            <button mat-raised-button style="color:blue" (click)="cerrarDialog()">Cancelar</button>
+            <button mat-raised-button color="primary" (click)="addCurso()">Añadir</button>
+        </div>
+    </form>
+</div>

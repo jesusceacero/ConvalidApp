@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ConvalidApp</string>
+    <string name="title_home">Schechule</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="corporrativo">The email entered must be the corporate one (@triana.salesianos.edu)</string>
+    <string name="title_profile">Profile</string>
+    <string name="modificarContrase">Edit password</string>
+    <string name="guardarContra">Save password</string>
+    <string name="modificarDatos">Modificar datos</string>
+    <string name="guardarDatos">Guardar datos</string>
+    <string name="title_convalidados">CONVALIDADOS</string>
+    <string name="title_extras">EXTRAS</string>
+    <string name="title_imparte">IMPARTE</string>
+    <string name="title_asignatura">Validated</string>
+    <string name="action_logout">Log out</string>
+    <string name="registrar">Record departure</string>
+    <string name="mensajeRegitrar">Are you sure you want to record this output?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="mensajeHistorialRegistrado">Output successfully registered</string>
+    <string name="qr">QR</string>
+    <string name="buscar">Search again</string>
+    <string name="users">Users</string>
+    <string name="error_in_the_connection">Error in the connection</string>
+    <string name="selecPhoto">You must select a photo before saving it</string>
+    <string name="savePhoto">The photo was saved correctly</string>
+    <string name="validacion">Validation</string>
+    <string name="mensageValidacion">Are you sure you want to delete the user\'s photo?</string>
+</resources>

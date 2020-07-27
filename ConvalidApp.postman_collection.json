@@ -1,0 +1,1182 @@
+{
+	"info": {
+		"_postman_id": "0680c2d2-e004-43f8-af9f-775d17acce56",
+		"name": "ConvalidApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fullname\": \"Jesus Ceacero Jimeno\",\n\t\"email\" : \"c@triana.salesianos.edu\",\n\t\"password\" : \"1234\",\n\t\"birthdate\" : \"28/08/1991\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/register",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"admin@triana.salesianos.edu\",\n\t\"password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/login",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e6fd35ac94eec52e4d8878f",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e6fd35ac94eec52e4d8878f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fullname\": \"pepe\",\n\t\"password\": \"123456\",\n    \"birthdate\": \"28/08/1991\",\n    \"permissions\": true,\n    \"photo\": null,\n    \"modules\": [\"5e710b01e436d44f484baa1b\",\"5e710cb9e0cb564c946d59a7\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e6fc84a54d29a38b497461e",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e6fc84a54d29a38b497461e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e6fc84a54d29a38b497461e",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e6fc84a54d29a38b497461e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllProfesor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTc3NWY0OWZhMjk5YjUwZTRlNWE5NWUiLCJleHAiOjE1ODQ4OTg4NDAzNDQsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.lI62tuJfuZyv5h9Qg9EYHyCAX49N4muP6bjqX16iL6U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/profesor",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"profesor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar contraseña ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTc4Zjk3ZmMwNWI4NjAwMTc1MjgxYzUiLCJleHAiOjE1ODQ5ODY2MDgxNTEsImVtYWlsIjoiam1AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.UyoFh963BdihzQ-w2H43PhiCj943GGrdc2NSv0OsSgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jm@triana.salesianos.edu\",\n\t\"password\": \"1278\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e78f97fc05b8600175281c5/password",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e78f97fc05b8600175281c5",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener foto usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTc3NjMyOGZhMjk5YjUwZTRlNWE5NjciLCJleHAiOjE1ODUxMzA1NDgzMTIsImVtYWlsIjoidEB0cmlhbmEuc2FsZXNpYW5vcy5lZHUifQ.2mrdzH6SumjsFD-WQJ-ltdpl0hBEY5KFkgEloUkgXG8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e776328fa299b50e4e5a967/img",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e776328fa299b50e4e5a967",
+								"img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar foto ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTc3NjMyOGZhMjk5YjUwZTRlNWE5NjciLCJleHAiOjE1ODUxMzA1NDgzMTIsImVtYWlsIjoidEB0cmlhbmEuc2FsZXNpYW5vcy5lZHUifQ.2mrdzH6SumjsFD-WQJ-ltdpl0hBEY5KFkgEloUkgXG8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/jose_/Desktop/ConvalidApp/LogoConvalidApp.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e776328fa299b50e4e5a967/img",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e776328fa299b50e4e5a967",
+								"img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar imagen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTc3NjMyOGZhMjk5YjUwZTRlNWE5NjciLCJleHAiOjE1ODUyMjIyODE0MjUsImVtYWlsIjoidEB0cmlhbmEuc2FsZXNpYW5vcy5lZHUifQ.eBLfXBvesv8JZ63_MTFHSLJy0aucf7-vqpxPOg-AqJQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/5e776328fa299b50e4e5a967/img",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"5e776328fa299b50e4e5a967",
+								"img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"admin@triana.salesianos.edu\",\n\t\"password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/users/login/admin",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "añadir curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"2º Desarrollo de aplicaciones multiplataforma\",\n\t\"acronym\" : \"2 Dam\",\n\t\"modules\": [\"5e710cb9e0cb564c946d59a7\",\"5e71f90300fb8a0f5cb4719d\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/courses/add",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"courses",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todos los cursos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/courses/",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/courses/5e71f63817872b30c8adba40",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"courses",
+								"5e71f63817872b30c8adba40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"2º Desarrollo de aplicaciones\",\n\t\"acronym\" : \"2 Dam\",\n\t\"modules\": [\"5e710cb9e0cb564c946d59a7\",\"5e71f90300fb8a0f5cb4719d\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/courses/edit/5e71f63817872b30c8adba40",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"courses",
+								"edit",
+								"5e71f63817872b30c8adba40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/courses/delete/5e71f63817872b30c8adba40",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"courses",
+								"delete",
+								"5e71f63817872b30c8adba40"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "horario",
+			"item": [
+				{
+					"name": "nuevo horario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dia\" : \"Martes\",\n\t\"hora\": \"11:30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/schedules/add",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedules",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/schedules/",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedules",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/schedules/5e710ae6e436d44f484baa1a",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedules",
+								"5e710ae6e436d44f484baa1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar horario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dia\" : \"Martes\",\n\t\"hora\": \"14:30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/schedules/edit/5e710ac5e436d44f484baa17",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedules",
+								"edit",
+								"5e710ac5e436d44f484baa17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar horario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/schedules/delete/5e710a84e436d44f484baa16",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedules",
+								"delete",
+								"5e710a84e436d44f484baa16"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "modulos",
+			"item": [
+				{
+					"name": "registrar modulo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Desarrollo de interfaces\",\n\t\"acronym\" : \"DI\",\n\t\"teacher\" : \"5e6fd35ac94eec52e4d8878f\",\n\t\"horario\" : [\"5e710ae6e436d44f484baa1a\",\"5e710ac5e436d44f484baa17\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/modules/add",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modules",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/modules/",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modules",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/modules/5e71feb8107d4417e053712f",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modules",
+								"5e71feb8107d4417e053712f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar Modulo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Entornos de D\",\n\t\"acronym\" : \"ED\",\n\t\"teacher\" : \"5e6fb938564b660017d37a7a\",\n\t\"horario\" : [\"5e710ae6e436d44f484baa1a\",\"5e710ac5e436d44f484baa17\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/modules/edit/5e710356c8db0425b856a5f1",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modules",
+								"edit",
+								"5e710356c8db0425b856a5f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar modulo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/modules/delete/5e710356c8db0425b856a5f1",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modules",
+								"delete",
+								"5e710356c8db0425b856a5f1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "historial",
+			"item": [
+				{
+					"name": "añadir historial",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\" : \"5e6fb938564b660017d37a7a\",\n\t\"module\" : \"5e711163e9a8c723184c7de7\",\n\t\"horario\" : \"5e710ac5e436d44f484baa17\",\n\t\"fechayhora\" : [2020,2,1,13,30]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/historial/add",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"historial",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos las historias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/historial/",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"historial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/historial/5e724580ae7b652d004bdc10",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"historial",
+								"5e724580ae7b652d004bdc10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar historia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\" : \"5e6fc84a54d29a38b497461e\",\n\t\"module\" : \"5e711163e9a8c723184c7de7\",\n\t\"horario\" : \"5e710ac5e436d44f484baa17\",\n\t\"fechayhora\" : [2020,2,1,13,30]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/historial/edit/5e724580ae7b652d004bdc10",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"historial",
+								"edit",
+								"5e724580ae7b652d004bdc10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar historial",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTcyNGNmYzIxMWI5MjBlYjA4YThlM2YiLCJleHAiOjE1ODQ1NDkyMTcwMTIsImVtYWlsIjoiYWRtaW5AdHJpYW5hLnNhbGVzaWFub3MuZWR1In0.vK10XGQp_mnLmBZjj-77oOWUjuSrNyIxWho_0F7_X98",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://convalid-app.herokuapp.com/historial/delete/5e721af64c607d37d472eddc",
+							"protocol": "https",
+							"host": [
+								"convalid-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"historial",
+								"delete",
+								"5e721af64c607d37d472eddc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
