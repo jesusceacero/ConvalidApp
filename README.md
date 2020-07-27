@@ -10,7 +10,7 @@ Para las asignaturas:
 
 #### Proyecto realizado por equipos
 ##### Realizado por:
-* [Jesus Ceacero Jimeno](https://github.com/cads918 "Jesus Ceacero Jimeno perfil de GitHub")
+* [Jesus Ceacero Jimeno](https://github.com/jesusceacero "Jesus Ceacero Jimeno perfil de GitHub")
 * [José Manuel Terrero Guillamón](https://github.com/joseterrero "José Manuel Terrero Guillamón perfil de GitHub")
 
 ***
